@@ -13,13 +13,15 @@
 
   <context:component-scan base-package="sample.customer.web.controller"/>
   <context:component-scan base-package="sample.user.web.controller"/>
-
+  
+  <!-- 스프링 MVC 애노테이션 이용 설정 -->
   <mvc:annotation-driven
     validator="globalValidator" enable-matrix-variables="true"/>
 
   <!-- Static Resource 설정 -->
   <mvc:resources mapping="/resources/**" location="/WEB-INF/resources/" />
-
+  
+  <!-- ViewResolver 설정 -->
   <mvc:view-resolvers>
     <mvc:jsp prefix="/WEB-INF/views/" suffix=".jsp"/>
   </mvc:view-resolvers>
