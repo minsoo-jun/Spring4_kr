@@ -5,28 +5,27 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>顧客一覧画面</title>
+<title>고객 목록 화면</title>
 </head>
 <body>
-<h1>顧客一覧画面</h1>
+<h1>고객 목록 화면</h1>
 <c:if test="${editedCustomer != null}">
-以下の顧客が更新されました。
-<dl>
-  <dt>名前</dt>
+아래의 고객님이 갱신되었습니다.<dl>
+  <dt>이름</dt>
   <dd><c:out value="${editedCustomer.name}"/></dd>
-  <dt>Eメールアドレス</dt>
+  <dt>이메일 주소</dt>
   <dd><c:out value="${editedCustomer.emailAddress}"/></dd>
-  <dt>誕生日</dt>
+  <dt>생년월일</dt>
   <dd><fmt:formatDate pattern="yyyy/MM/dd" value="${editedCustomer.birthday}"/></dd>
-  <dt>好きな数字</dt>
+  <dt>좋아 하는 숫자</dt>
   <dd><c:out value="${editedCustomer.favoriteNumber}"/></dd>
 </dl>
 </c:if>
 <table border="1">
   <tr>
     <th>ID</th>
-    <th>名前</th>
-    <th>Eメールアドレス</th>
+    <th>이름</th>
+    <th>이메일 주소</th>
     <th></th>
   </tr>
   <c:forEach items="${customers}" var="customer">
@@ -36,9 +35,9 @@
     <td><c:out value="${customer.emailAddress}"/></td>
     <td>
       <c:url value="/customer/${customer.id}" var="url"/>
-      <a href="${url}">詳細</a>
+      <a href="${url}">상세</a>
       <c:url value="/customer/${customer.id}/edit" var="url"/>
-      <a href="${url}">編集</a>
+      <a href="${url}">편집</a>
     </td>
   </tr>
   </c:forEach>
