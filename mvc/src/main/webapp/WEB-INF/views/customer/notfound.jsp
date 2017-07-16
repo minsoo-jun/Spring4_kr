@@ -9,6 +9,6 @@
 <body>
 <h1>지정한 고객은 등록되어 있지 않습니다</h1>
 <c:url value="/customer" var="url"/>
-<a href="${url}">리스트 화면으로</a>
+<a href="${url}">목록</a>
 </body>
 </html>

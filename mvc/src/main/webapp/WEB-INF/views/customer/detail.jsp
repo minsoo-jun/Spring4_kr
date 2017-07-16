@@ -20,6 +20,6 @@
   <dd><c:out value="${customer.favoriteNumber}"/></dd>
 </dl>
 <c:url value="/customer" var="url"/>
-<a href="${url}">리스트</a>
+<a href="${url}">목록</a>
 </body>
 </html>
