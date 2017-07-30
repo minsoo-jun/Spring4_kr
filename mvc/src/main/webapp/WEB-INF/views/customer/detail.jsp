@@ -16,7 +16,7 @@
   <dd><c:out value="${customer.emailAddress}"/></dd>
   <dt>생년월일</dt>
   <dd><fmt:formatDate pattern="yyyy/MM/dd" value="${customer.birthday}"/></dd>
-  <dt>좋아 하는 숫자</dt>
+  <dt>좋아하는 숫자</dt>
   <dd><c:out value="${customer.favoriteNumber}"/></dd>
 </dl>
 <c:url value="/customer" var="url"/>
